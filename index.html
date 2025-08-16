@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme & Font Toggle Plugin Demo</title>
+    <link rel="stylesheet" href="theme-font-toggle.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Plugin Controls -->
+        <div class="plugin-controls">
+            <div class="control-group">
+                <label for="theme-toggle">Theme:</label>
+                <select id="theme-toggle" class="theme-selector">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="auto">Auto</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="font-toggle">Font:</label>
+                <select id="font-toggle" class="font-selector">
+                    <option value="system">System Default</option>
+                    <option value="serif">Serif</option>
+                    <option value="sans-serif">Sans Serif</option>
+                    <option value="monospace">Monospace</option>
+                    <option value="cursive">Cursive</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="font-size-toggle">Font Size:</label>
+                <select id="font-size-toggle" class="font-size-selector">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Demo Content -->
+        <header class="demo-header">
+            <h1>Theme & Font Toggle Plugin</h1>
+            <p class="subtitle">A customizable plugin for switching themes and fonts</p>
+        </header>
+
+        <main class="demo-content">
+            <section class="feature-section">
+                <h2>Features</h2>
+                <ul>
+                    <li>Light and Dark theme support</li>
+                    <li>Auto theme detection based on system preference</li>
+                    <li>Multiple font family options</li>
+                    <li>Adjustable font sizes</li>
+                    <li>Local storage persistence</li>
+                    <li>Smooth transitions</li>
+                </ul>
+            </section>
+
+            <section class="demo-section">
+                <h2>Sample Content</h2>
+                <p>This is a paragraph to demonstrate how the theme and font changes affect the appearance of text. You can switch between different themes and fonts using the controls above.</p>
+                
+                <blockquote>
+                    "The best way to find out if you can trust somebody is to trust them." - Ernest Hemingway
+                </blockquote>
+
+                <h3>Code Example</h3>
+                <pre><code>function toggleTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('preferred-theme', theme);
+}</code></pre>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </section>
+        </main>
+
+        <footer class="demo-footer">
+            <p>&copy; 2024 Theme & Font Toggle Plugin. Built with vanilla JavaScript.</p>
+        </footer>
+    </div>
+
+    <script src="theme-font-toggle.js"></script>
+</body>
+</html>

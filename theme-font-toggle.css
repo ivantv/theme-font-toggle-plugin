@@ -1,0 +1,329 @@
+/* CSS Custom Properties for Theme Variables */
+:root {
+    /* Light Theme Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --accent-color: #007bff;
+    --accent-hover: #0056b3;
+    --shadow: rgba(0, 0, 0, 0.1);
+    
+    /* Font Variables */
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #404040;
+    --accent-color: #4dabf7;
+    --accent-hover: #339af0;
+    --shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* Auto Theme - Uses system preference */
+@media (prefers-color-scheme: dark) {
+    [data-theme="auto"] {
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+        --border-color: #404040;
+        --accent-color: #4dabf7;
+        --accent-hover: #339af0;
+        --shadow: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Font Family Classes */
+[data-font="system"] {
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+[data-font="serif"] {
+    --font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+[data-font="sans-serif"] {
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-font="monospace"] {
+    --font-family: 'Courier New', Courier, monospace;
+}
+
+[data-font="cursive"] {
+    --font-family: 'Brush Script MT', cursive;
+}
+
+/* Font Size Classes */
+[data-font-size="small"] {
+    --font-size: 14px;
+}
+
+[data-font-size="medium"] {
+    --font-size: 16px;
+}
+
+[data-font-size="large"] {
+    --font-size: 18px;
+}
+
+[data-font-size="extra-large"] {
+    --font-size: 20px;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Plugin Controls Styles */
+.plugin-controls {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.theme-selector,
+.font-selector,
+.font-size-selector {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-selector:hover,
+.font-selector:hover,
+.font-size-selector:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.theme-selector:focus,
+.font-selector:focus,
+.font-size-selector:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Demo Content Styles */
+.demo-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.demo-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.demo-content {
+    margin-bottom: 40px;
+}
+
+.feature-section,
+.demo-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-section h2,
+.demo-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.demo-section h3 {
+    color: var(--text-primary);
+    margin: 25px 0 15px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.feature-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-section li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-primary);
+}
+
+.feature-section li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
+    padding: 15px 20px;
+    border-radius: 0 4px 4px 0;
+}
+
+pre {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 15px;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: var(--accent-color);
+}
+
+pre code {
+    color: var(--text-primary);
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.demo-footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plugin-controls {
+        flex-direction: column;
+    }
+    
+    .control-group {
+        min-width: 100%;
+    }
+    
+    .demo-header h1 {
+        font-size: 2em;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .feature-section,
+    .demo-section {
+        padding: 20px;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+        --shadow: rgba(0, 0, 0, 0.3);
+    }
+    
+    [data-theme="dark"] {
+        --border-color: #ffffff;
+        --shadow: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}

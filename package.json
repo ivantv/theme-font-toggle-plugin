@@ -1,0 +1,39 @@
+{
+  "name": "theme-font-toggle-plugin",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript plugin for managing theme and font preferences with local storage persistence",
+  "main": "theme-font-toggle.js",
+  "files": [
+    "theme-font-toggle.js",
+    "theme-font-toggle.css",
+    "README.md"
+  ],
+  "keywords": [
+    "theme",
+    "font",
+    "toggle",
+    "dark-mode",
+    "light-mode",
+    "accessibility",
+    "javascript",
+    "css",
+    "plugin",
+    "vanilla-js"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/theme-font-toggle-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/theme-font-toggle-plugin/issues"
+  },
+  "homepage": "https://github.com/yourusername/theme-font-toggle-plugin#readme",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

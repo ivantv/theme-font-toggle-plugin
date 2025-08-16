@@ -3,20 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme & Font Toggle Plugin Demo</title>
-    <meta name="description" content="A lightweight JavaScript plugin for managing theme and font preferences with local storage persistence">
-    <meta name="theme-color" content="#007bff">
-    
-    <!-- Chrome Extension optimized -->
-    
-    <!-- Icons -->
-    <link rel="icon" type="image/svg+xml" href="icon.svg">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-    <link rel="apple-touch-icon" href="icon-192.png">
-    
-    <!-- Stylesheets -->
+    <title>Theme & Font Toggle</title>
     <link rel="stylesheet" href="theme-font-toggle.css">
+    <style>
+        body {
+            width: 320px;
+            min-height: 400px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: none;
+            margin: 0;
+            padding: 15px;
+        }
+        
+        .plugin-controls {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        
+        .demo-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .demo-header h1 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 0.9em;
+        }
+        
+        .demo-content {
+            margin-bottom: 20px;
+        }
+        
+        .feature-section {
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-section h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .feature-section li {
+            padding: 4px 0;
+            font-size: 0.9em;
+        }
+        
+        .demo-footer {
+            padding: 10px 0;
+            font-size: 0.8em;
+        }
+        
+        /* Hide some sections for popup */
+        .demo-section {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -53,48 +105,32 @@
             </div>
         </div>
 
-        <!-- Demo Content -->
+        <!-- Demo Header -->
         <header class="demo-header">
-            <h1>Theme & Font Toggle Plugin</h1>
-            <p class="subtitle">A customizable plugin for switching themes and fonts</p>
+            <h1>Theme & Font Toggle</h1>
+            <p class="subtitle">Chrome Extension</p>
         </header>
 
+        <!-- Demo Content -->
         <main class="demo-content">
             <section class="feature-section">
                 <h2>Features</h2>
                 <ul>
-                    <li>Light and Dark theme support</li>
-                    <li>Auto theme detection based on system preference</li>
-                    <li>Multiple font family options</li>
+                    <li>Light and Dark themes</li>
+                    <li>Auto system detection</li>
+                    <li>Multiple font families</li>
                     <li>Adjustable font sizes</li>
-                    <li>Local storage persistence</li>
-                    <li>Smooth transitions</li>
+                    <li>Persistent preferences</li>
                 </ul>
-            </section>
-
-            <section class="demo-section">
-                <h2>Sample Content</h2>
-                <p>This is a paragraph to demonstrate how the theme and font changes affect the appearance of text. You can switch between different themes and fonts using the controls above.</p>
-                
-                <blockquote>
-                    "The best way to find out if you can trust somebody is to trust them." - Ernest Hemingway
-                </blockquote>
-
-                <h3>Code Example</h3>
-                <pre><code>function toggleTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('preferred-theme', theme);
-}</code></pre>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
             </section>
         </main>
 
         <footer class="demo-footer">
-            <p>&copy; 2024 Theme & Font Toggle Plugin. Built with vanilla JavaScript.</p>
+            <p>&copy; 2024 Theme Toggle Extension</p>
         </footer>
     </div>
 
     <script src="theme-font-toggle.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>

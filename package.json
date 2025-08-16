@@ -24,12 +24,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/theme-font-toggle-plugin.git"
+    "url": "https://github.com/ivantv/theme-font-toggle-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/theme-font-toggle-plugin/issues"
+    "url": "https://github.com/ivantv/theme-font-toggle-plugin/issues"
   },
-  "homepage": "https://github.com/yourusername/theme-font-toggle-plugin#readme",
+  "homepage": "https://github.com/ivantv/theme-font-toggle-plugin#readme",
   "scripts": {
     "start": "python -m http.server 8000",
     "serve": "python3 -m http.server 8000"
